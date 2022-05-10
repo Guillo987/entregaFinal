@@ -1,0 +1,332 @@
+//CSS reset
+@import "../scss/utilities/reset";
+
+//Variables
+@import "../scss/utilities/variables";
+
+
+/*Propiedades generales - mobileFirst*/
+body {
+    overflow-x: hidden;
+    color: black;
+}
+
+header {
+    grid-area: header;
+    background-image: $fondoHeader;
+
+    .logoBanner {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 500;
+        padding-top: 0.9rem;
+    }
+
+    .subtitulo {
+        text-align: center;
+        margin-top: 0.5rem;
+        padding-bottom: 0.3rem;
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+}
+
+nav {
+    grid-area: nav;
+    border-bottom: solid 2px black;
+    border-top: solid 2px black;
+    background-color: $fondoNav;
+
+    ul {
+        li {
+            margin-bottom: 0.3rem;
+            margin-top: 0.3rem;
+            padding: 0.3rem;
+            text-transform: uppercase;
+            font-size: 1rem;
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                border-radius: 0.5rem;
+                padding-right: 0.3rem;
+                padding-left: 0.3rem;
+                font-weight: bolder;
+
+                &:hover {
+                    background-color: $colorHover;
+                }
+            }
+        }
+    }
+}
+
+p {
+    text-align: justify;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    margin: 2rem;
+}
+
+.botonWA {
+    display: none;
+}
+
+.botonArriba {
+    display: none;
+}
+
+footer {
+    grid-area: footer;
+    background-image: $fondoFooter;
+    border-bottom: solid 2px black;
+    border-top: solid 2px black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .iconosRedes {
+        display: flex;
+        justify-content: center;
+
+        .iconos {
+            height: 1.5rem;
+            width: 1.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .pieDePag {
+        text-align: center;
+        
+        font-size: 0.5rem;
+        margin-top: 1rem;
+    }
+}
+
+/*Propiedades Index*/
+.contenedor {
+    overflow-y: hidden;
+    display: grid;
+    height: 100%;
+    grid-template-areas: "header header"
+        "nav nav"
+        "saludoIndex saludoIndex"
+        "footer footer";
+    grid-template-columns: 100%;
+    grid-template-rows: min-content auto min-content min-content;
+    background-image: $fondoPrincipal;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+
+    .contHero {
+        display: none;
+    }
+
+    .saludoIndex {
+        grid-area: saludoIndex;
+        font-size: 0.8rem;
+        text-align: center;
+        align-self: center;
+        margin-left: 0.3rem;
+        padding-top: 4.5rem;
+
+        p {
+            text-align: center;
+            font-weight: bolder;
+        }
+    }
+
+    .parrafoIndex {
+        grid-area: parrafoIndex;
+        font-size: 1rem;
+        text-align: center;
+        align-self: center;
+        padding-bottom: 1rem;
+    }
+
+    .fondoIndex {
+        display: none;
+    }
+}
+
+/*Propiedades quienes-somos.html*/
+.contenedor2 {
+    overflow-y: hidden;
+    display: grid;
+    grid-template-areas: "header header"
+        "nav nav"
+        "main1 main1"
+        "main2 main2"
+        "footer footer";
+    background-image: $fondoPrincipal;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+
+    .main1 {
+        grid-area: main1;
+    }
+
+    .main2 {
+        grid-area: main2;
+    }
+
+    .fotoPsi,
+    .fotoPsi2 {
+        display: none;
+    }
+
+    .fotoBio1 {
+        grid-area: fotoBio1;
+    }
+
+    .fotoBio2 {
+        grid-area: fotoBio2;
+    }
+
+    .nombrePsi {
+        font-size: 1.5rem;
+        padding-left: 22px;
+        margin-top: 55px;
+        font-style: italic;
+        text-align: center;
+    }
+}
+
+/*nuestros-articulos*/
+.contenedor3 {
+    height: 100%;
+    display: grid;
+    grid-template-areas: "header header"
+        "nav nav"
+        "main main"
+        "footer footer";
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto auto auto;
+    background-image: $fondoPrincipal;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+
+    main {
+        grid-area: main;
+
+        .otrosP {
+            margin: 1rem;
+        }
+    }
+
+    .listaArt {
+        display: none;
+    }
+
+    .nombreArt {
+        font-size: 1.5rem;
+        padding-left: 22px;
+        margin-top: 55px;
+        text-align: center;
+    }
+}
+
+
+/*preguntas-frecuentes*/
+.contenedor4 {
+    height: 100%;
+    display: grid;
+    grid-template-areas: "header header"
+        "nav nav"
+        "main main"
+        "footer footer";
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto auto auto;
+    background-image: $fondoPrincipal;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+
+    .listaFaq {
+        display: none;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    .faq {
+        font-size: 1.5rem;
+        padding-left: 22px;
+        margin-top: 55px;
+        text-align: center;
+    }
+}
+
+/*contacto*/
+.contenedor5 {
+    height: 100%;
+    display: grid;
+    grid-template-areas: "header header"
+        "nav nav"
+        "main main"
+        "footer footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+    background-image: $fondoPrincipal;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+
+
+    header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: main;
+
+        .secciones {
+            font-size: 1.1rem;
+            font-weight: 400;
+            padding: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .botonPais {
+            margin-top: 2rem;
+        }
+
+        button {
+            padding: 0.5rem;
+            margin-bottom: 0.8rem;
+            margin-top: 0.8rem;
+        }
+
+        .genero {
+            margin-top: 2rem;
+        }
+    
+        .secciones {
+            font-weight: 500;
+        }
+
+    }
+
+    
+
+    footer {
+        grid-area: footer;
+        margin-top: 30px
+    }
+
+}
+
+//Media Queries
+@import "../scss/utilities/mediaQueries";

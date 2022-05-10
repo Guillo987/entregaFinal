@@ -1,0 +1,23 @@
+@mixin menuLateralDesktop {
+    grid-area: listaArt;
+    display: flex;
+    margin-top: 19rem;
+    margin-left: 3.5rem;
+    position: fixed;
+    display: block;
+}
+
+@mixin botonesLateralesDesktop {
+    margin: 0.5rem;
+    list-style: none;
+    background-color: $fondoBotones;
+    border: solid 1px black;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+}
+
+@mixin art-faqDesktop {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.5rem;
+}

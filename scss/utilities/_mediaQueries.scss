@@ -1,0 +1,453 @@
+/*Media queries*/
+/*Media queries - Tablet (breakPoint min 600px)*/
+@media only screen and (min-width: 600px) {
+
+    header {
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 500;
+            padding-top: 2rem;
+        }
+
+        .subtitulo {
+            margin-top: 0.5rem;
+            padding-bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: 300;
+        }
+    }
+
+    nav {
+        grid-area: nav;        
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .botonWA {
+        display: block;
+        height: 2rem;
+        width: 2rem;
+        position: fixed;
+        bottom: 1.1rem;
+        right: 0.7rem;
+    }
+
+    footer {
+        .iconosRedes {
+            .iconos {
+                height: 1.8rem;
+                width: 1.8rem;
+            }
+        }
+
+        .pieDePag {
+            font-size: 0.8rem;
+            padding-bottom: 1rem;
+        }
+
+        a {
+            color: darkblue;
+
+            &:hover {
+                color: blue;
+            }
+        }
+
+        margin-top: 3rem;
+    }
+
+    /*index*/
+    .contenedor {
+        height: 100%;
+        grid-template-areas: "header header"
+            "nav nav"
+            "saludoIndex saludoIndex"
+            "footer footer";
+        grid-template-columns: 100%;
+        grid-template-rows: min-content auto 50% min-content;
+
+        .saludoIndex {
+            grid-area: saludoIndex;
+            font-size: 1rem;
+            text-align: center;
+            align-self: center;
+            padding-top: 3rem;
+            padding-bottom: 4rem;
+
+            img {
+                height: 8rem;
+            }
+        }
+
+        .bienvenidos {
+            display: none;
+        }
+    }
+
+    .contenedor5 {
+        height: 100%;
+        display: grid;
+        grid-template-areas: "header header"
+            "nav nav"
+            "main main"
+            "footer footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto 5% auto auto;
+    }
+}
+
+/*Media queries - Desktop (breakPoint min 1024px)*/
+@media only screen and (min-width: 1024px) {
+
+    /*Propiedades generales*/
+    .contenedor,
+    .contenedor2,
+    .contenedor3,
+    .contenedor4,
+    .contenedor5 {
+        .logoBanner {
+            display: block;
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: 0.9rem;
+            margin-left: 1.5rem;
+            animation-name: girarLogo;
+            animation-timing-function: initial;
+            animation-duration: 1s;
+
+            @keyframes girarLogo {
+
+                from {
+                    transform: rotate(0);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        header {
+
+            h1 {
+                text-align: right;
+                margin-right: 70px;
+                font-size: 45px;
+                font-weight: 500;
+                padding-top: 30px;
+            }
+
+            .subtitulo {
+                text-align: right;
+                margin-right: 70px;
+                font-size: 30px;
+                font-weight: 300;
+                padding-bottom: 35px;
+            }
+        }
+    }
+
+    nav {
+        background-color: $fondoNav;        
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            
+            li {
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    p {
+        text-align: justify;
+        text-indent: 50px;
+        font-size: 18px;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .otrosP {
+        margin: 1rem;
+        padding: 0.5rem;
+
+    }
+
+    .botonWA {
+        display: block;
+        height: 60px;
+        width: 60px;
+        border: none;
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .botonArriba {
+        display: block;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    footer {
+        padding: 5px;
+
+        .iconosRedes {
+            padding-top: 30px;
+            text-align: center;
+
+            .iconos {
+                height: 1.8rem;
+                width: 1.8rem;
+                height: 45px;
+                width: 45px;
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+        }
+
+        .pieDePag {
+            font-size: 0.9rem;
+            padding-bottom: 0.5rem;
+            font-size: 12px;
+            padding: 9px;
+        }
+
+        .botonArriba {
+            border-radius: 0.5rem;
+            padding-right: 0.3rem;
+            padding-left: 0.3rem;
+
+            &:visited {
+                color: black;
+            }
+        }
+    }
+
+
+    /*Propiedades Index*/
+    .contenedor {
+        overflow-x: hidden;
+        display: grid;
+        height: 1200px;
+        grid-template-areas: "header header"
+            "nav nav"
+            "main main"
+            "footer footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto 60% auto;
+        background-image: url('../img/fotoHome.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .saludoIndex {
+            display: none;
+        }
+
+        
+
+        main {
+            grid-area: main;
+
+            .contHero {
+                display: block;
+                justify-content: center;
+                text-align: center;
+                padding-top: 170px;
+
+                h2 {
+                    color: whitesmoke;
+                    font-size:8rem;
+                    margin-bottom: 20px;
+                }
+
+                .contBotMain {
+                    a {
+                        display: inline;
+                        text-align: center;
+                        text-decoration: none;
+                        padding: 10px;
+                        border-radius: 10px;
+                        font-size: 50px;
+                        font-weight: bold;
+                        background-color: whitesmoke;
+                        color: blueviolet;
+
+                        &:hover {
+                            color: $fondoBotones;
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    /*quienes-somos*/
+    .contenedor2 {
+        display: grid;
+        grid-template-areas: "header header"
+            "nav nav"
+            "main1 fotoBio1"
+            "fotoBio2 main2"
+            "footer footer";
+        grid-template-columns: 50% 50%;
+
+        .main1 {
+            padding-top: 5rem;
+        }
+
+        .fotoPsi {
+            height: auto;
+            width: 20rem;
+            display: block;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            border-radius: 1.5rem;
+        }
+
+        .contenedorFotoPsi {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.2rem;
+        }
+
+        .contenedorBio {
+            padding-top: 5rem;
+            text-align: center;
+            padding-right: 1rem;
+            padding-left: 1rem;
+
+        }
+
+        p {
+            padding: 2.5rem
+        }
+    }
+
+    //Mixins sin parámetros
+
+    @import "mixins";
+
+    /*nuestros-articulos*/
+    .contenedor3 {
+        display: grid;
+        height: 100%;
+        grid-template-areas: "header header"
+            "nav nav"
+            "listaArt main"
+            "footer footer";
+        grid-template-columns: 20% 80%;
+        grid-template-rows: auto auto auto auto;
+
+        .listaArt {
+            @include menuLateralDesktop;
+
+            ul {
+
+                li {
+                    @include botonesLateralesDesktop;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                    a {
+                        text-decoration: none;
+
+                        &:visited {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nombreArt {
+            @include art-faqDesktop;
+        }
+    }
+
+
+    /*preguntas-frecuentes*/
+    .contenedor4 {
+        display: grid;
+        height: 100%;
+        grid-template-areas: "header header"
+            "nav nav"
+            "listaFaq main"
+            "footer footer";
+        grid-template-columns: 20% 80%;
+        grid-template-rows: auto auto auto auto;
+
+        .listaFaq {
+            @include menuLateralDesktop;
+
+            ul {
+
+                li {
+                    @include botonesLateralesDesktop;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                    a {
+                        text-decoration: none;
+
+                        &:visited {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+
+        .faq {
+            @include art-faqDesktop;
+        }
+
+        p {
+            padding-bottom: 2rem;
+            margin-right: 4rem;
+        }
+    }
+
+
+    /*Contacto*/
+    .contenedor5 {
+        width: $anchoContactoDesktop;
+
+        display: grid;
+        grid-template-areas: "header header"
+            "nav nav"
+            "main main"
+            "footer footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto  auto auto;
+
+        //Operación
+        main {
+            width: ($anchoContactoDesktop/1.4);
+        }
+    }
+}
