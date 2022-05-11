@@ -85,10 +85,10 @@ footer {
 .contenedor {
   overflow-y: hidden;
   display: grid;
-  height: 100%;
+  height: auto;
   grid-template-areas: "header header" "nav nav" "saludoIndex saludoIndex" "footer footer";
   grid-template-columns: 100%;
-  grid-template-rows: min-content auto min-content min-content;
+  grid-template-rows: auto auto auto auto;
   background-image: linear-gradient(to right, #a3d5b1, whitesmoke);
   font-family: 'Roboto', sans-serif;
   line-height: 1.5; }
@@ -253,7 +253,7 @@ footer {
         color: blue; }
   /*index*/
   .contenedor {
-    height: 100%;
+    height: auto;
     grid-template-areas: "header header" "nav nav" "saludoIndex saludoIndex" "footer footer";
     grid-template-columns: 100%;
     grid-template-rows: min-content auto 50% min-content; }
@@ -330,8 +330,10 @@ footer {
     nav ul {
       display: flex;
       justify-content: space-evenly; }
-      nav ul li:hover {
-        transform: scale(1.1); }
+      nav ul li {
+        font-size: 1.4rem; }
+        nav ul li:hover {
+          transform: scale(1.1); }
   p {
     text-align: justify;
     text-indent: 50px;

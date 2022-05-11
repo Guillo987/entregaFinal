@@ -61,7 +61,7 @@
 
     /*index*/
     .contenedor {
-        height: 100%;
+        height: auto;
         grid-template-areas: "header header"
             "nav nav"
             "saludoIndex saludoIndex"
@@ -165,6 +165,7 @@
             justify-content: space-evenly;
             
             li {
+                font-size: 1.4rem;
                 &:hover {
                     transform: scale(1.1);
                 }
