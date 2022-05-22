@@ -402,6 +402,7 @@ footer {
         padding-top: 170px; }
         .contenedor main .contHero h2 {
           color: whitesmoke;
+          text-shadow: 3px 3px #71907e;
           font-size: 8rem;
           margin-bottom: 20px; }
         .contenedor main .contHero .contBotMain a {
